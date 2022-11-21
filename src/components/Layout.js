@@ -6,7 +6,7 @@
 import React from 'react';
 import Header from './Header';
 import Slider from './Slider';
-import { outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const Layout = ({ children }) => {
     return (
@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
           <Slider />
           <Header />
           <main>{children}</main>
+          <Outlet />
         </>
     );
 }

@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Slider = () => {
-    const [data, setData] = usesState(null);
+    const [data, setData] = useState(null);
     const apiKey = process.env.REACT_APP_API_KEY;
 
     useEffect(() => {
@@ -12,7 +12,7 @@ const Slider = () => {
                     method: 'GET',
                     url: 'https://yfapi.net/v6/finance/quote/marketSummary',
                     headers:{
-                        'x-api-key': apikey
+                        'x-api-key': apiKey
                     }
                 };
                 const response = await axios.request(options);
@@ -62,4 +62,4 @@ const Slider = () => {
     ) 
 }
 
-export default Slider
+export default Slider;
