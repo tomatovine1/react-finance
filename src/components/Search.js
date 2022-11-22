@@ -1,8 +1,8 @@
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
-import { BsSearch } from 'react-icons/bs'
+import { BsSearch } from 'react-icons/bs';
 
-const Search ({ searchStringUpdated }) => {
-    const submitsearchString = (event) => searchStringUpdated(event.target.value);
+const Search = ({ searchStringUpdated }) => {
+    const submitSearchString = (event) => searchStringUpdated(event.target.value);
 
     return (
         <Container>
@@ -11,8 +11,8 @@ const Search ({ searchStringUpdated }) => {
                 className="mt-2 mb-4"
             >
             <Row>
-                <Col xs={12}>
-                    <Form.control
+                <Col xs={11}>
+                    <Form.Control
                         type="text"
                         placeholder="Search by Symbol..."
                         onChange={submitSearchString}
